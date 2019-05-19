@@ -14,6 +14,12 @@
     display: grid;
     grid-template-columns: 200px 1fr;
     grid-template-rows: 65px 1fr;
-    grid-template-areas: "dashboar      header"
+    grid-template-areas: "dashboard      header"
                          "nav           panel";
 }
+
+.contenedor .dashboard{
+    grid-area: dashboard;
+    background: #34495e;
+}
+
