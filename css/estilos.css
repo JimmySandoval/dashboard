@@ -37,3 +37,9 @@
     background: #34495e;
 }
 
+.contenedor .panel{
+    grid-area: panel;
+    width: 100%;
+    padding: 20px;    
+}
+
