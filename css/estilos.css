@@ -16,10 +16,18 @@
     grid-template-rows: 65px 1fr;
     grid-template-areas: "dashboard      header"
                          "nav           panel";
+    background: #f2f2f2;
 }
 
 .contenedor .dashboard{
     grid-area: dashboard;
     background: #34495e;
+}
+
+.contenedor .header{
+    width: 100%;
+    height: 65px;
+    background: #fff;
+    box-shadow: 3px 0px 4px rgba(44, 62, 80, 0.3);
 }
 
