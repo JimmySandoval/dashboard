@@ -32,3 +32,8 @@
     box-shadow: 3px 0px 4px rgba(44, 62, 80, 0.3);
 }
 
+.contenedor .menu{
+    grid-area: nav;
+    background: #34495e;
+}
+
