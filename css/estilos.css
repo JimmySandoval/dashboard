@@ -114,6 +114,13 @@
 .contenedor .menu{
     grid-area: nav;
     background: #34495e;
+
+    width: 200px;
+    height: 100%;
+    
+    overflow-x: scroll;
+    position: fixed;
+    margin-top: 65px;
 }
 
 .contenedor .panel{
