@@ -56,6 +56,26 @@
     box-shadow: 3px 0px 4px rgba(44, 62, 80, 0.3);
 }
 
+.contenedor .header .grupo-iconos{
+    overflow: hidden;
+    float: left;
+    width: 200px;
+    height: 65px;
+}
+
+.contenedor .header .grupo-iconos i{
+    color: #6C7A7A;
+    font-size: 22px;
+    line-height: 65px;
+    margin-left: 10px;
+}
+
+.contenedor .header .grupo-iconos i:first-child{
+    margin-left: 20px;
+}
+
+
+
 .contenedor .menu{
     grid-area: nav;
     background: #34495e;
