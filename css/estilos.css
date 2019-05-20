@@ -152,6 +152,22 @@
     background: #2C3E50;
 }
 
+.contenedor .menu .icono{
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.contenedor .menu .icono.izquierda{
+    float: left;
+    margin-right: 10px;
+}
+
+.contenedor .menu .icono.derecha{
+    float: right;
+    margin-left: 10px;
+}
+
 .contenedor .panel{
     grid-area: panel;
     width: 100%;
