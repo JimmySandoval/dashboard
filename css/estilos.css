@@ -23,7 +23,7 @@
     grid-area: dashboard;
     background: #34495e;
 
-    width: 100%;
+    width: 200px;
     height: 65px;
     text-align: center;
     color: #fff;
@@ -32,6 +32,8 @@
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+
+    position: fixed;
 }
 
 .contenedor .dashboard i{
