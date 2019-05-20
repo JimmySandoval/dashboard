@@ -96,6 +96,14 @@
     margin-right: 10px;
 }
 
+.contenedor .header .grupo-usuario p{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: #6C7A7A;
+
+    margin-right: 10px;
+}
 
 
 
