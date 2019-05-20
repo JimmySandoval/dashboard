@@ -86,6 +86,16 @@
     align-items: center;
 }
 
+.contenedor .header .grupo-usuario img{
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center center;
+
+    margin-right: 10px;
+}
+
 
 
 
