@@ -168,6 +168,29 @@
     margin-left: 10px;
 }
 
+.contenedor .menu ul li>ul{
+    display: none;
+}
+
+.contenedor .menu ul li ul li:nth-child(1){
+    margin-top: 3px;
+}
+
+.contenedor .menu ul li ul li a
+{
+    background: #2C3E50;
+    color: #fff;
+    line-height: 30px;
+
+    font-family: 'Roboto',sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.contenedor .menu ul li ul li a:hover{
+    border-right: 3px solid #3498DB;
+}
+
 .contenedor .panel{
     grid-area: panel;
     width: 100%;
