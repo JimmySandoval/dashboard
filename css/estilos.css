@@ -52,10 +52,13 @@
 
 .contenedor .header{
     grid-area: header;
-    width: 100%;
+    width: calc(100% - 200px);
     height: 65px;
     background: #fff;
     box-shadow: 3px 0px 4px rgba(44, 62, 80, 0.3);
+    
+    position: fixed;
+    margin-left: 200px;
 }
 
 .contenedor .header .grupo-iconos{
