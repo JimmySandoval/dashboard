@@ -74,6 +74,19 @@
     margin-left: 20px;
 }
 
+.contenedor .header .grupo-usuario{
+    overflow: hidden;
+    float: right;
+    width: 200px;
+    height: 65px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 
 .contenedor .menu{
