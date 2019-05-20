@@ -118,11 +118,14 @@
     width: 200px;
     height: 100%;
     
-    overflow-x: scroll;
+    overflow-y: scroll;
     position: fixed;
     margin-top: 65px;
 }
 
+.contenedor .menu::-webkit-scrollbar{
+    display: none;    
+}
 
 .contenedor .menu p{
     color: #6C7A7A;
