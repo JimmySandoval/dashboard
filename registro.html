@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registro</title>
+    <link rel="shortcut icon" href="img/logo.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8720eaa80f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/libraries/normalize.css">
+    <link rel="stylesheet" href="css/registro.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="wrapper-registro">
+            <div class="logo">
+                <img src="img/logo.svg" alt="">
+            </div>
+            <h1 class="tittle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae nihil quisquam eligendi.</h1>
+            <div class="formulario-registro">
+                <div class="frm-group group-nombres">
+                    <label for="txtNombresRegistro">Nombres:</label>
+                    <div class="group-input">
+                        <input type="text" class="frm-input" id="txtNombresRegistro" placeholder="Nombres" value="Jimmy">
+                        <div><i class="fas fa-user"></i></div>
+                    </div>
+                </div>
+                <div class="frm-group group-apellidos">
+                    <label for="txtApellidosRegistro">Apellidos:</label>
+                    <div class="group-input">
+                        <input type="text" class="frm-input" id="txtApellidosRegistro" placeholder="Apellidos" value="Sandoval">
+                        <div><i class="fas fa-user"></i></div>
+                    </div>
+                </div>
+                <div class="frm-group">
+                    <label for="txtCorreoRegistro">Correo:</label>
+                    <div class="group-input">
+                        <input type="text" class="frm-input" id="txtCorreoRegistro" placeholder="Correo" value="jimmysandoval196@gmail.com">
+                        <div><i class="fas fa-envelope"></i></div>
+                    </div>
+                </div>
+                <div class="frm-group">
+                    <label for="txtUsuarioRegistro">Usuario:</label>
+                    <div class="group-input">
+                        <input type="text" class="frm-input" id="txtUsuarioRegistro" placeholder="Usuario" value="samsandoval">
+                        <div><i class="fas fa-user"></i></div>
+                    </div>
+                </div>
+                <div class="frm-group">
+                    <label for="txtPasswordRegistro">Contraseña:</label>
+                    <div class="group-input">
+                        <input type="password" class="frm-input" id="txtPasswordRegistro" placeholder="Contraseña" value="Samsandoval2020@,.">
+                        <div class="view-pass">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="frm-group">
+                    <label for="txtConfirmarRegistro">Confirmar contraseña:</label>
+                    <div class="group-input">
+                        <input type="password" class="frm-input" id="txtConfirmarRegistro" placeholder="Confirmar contraseña" value="Samsandoval2020@,.">
+                        <div class="view-pass">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="frm-group group-celular">
+                    <label for="txtCelularRegistro">Celular:</label>
+                    <div class="group-input">
+                        <div class="identificador">
+                            <img src="img/flag.svg" alt="Perú">
+                            <span>+51</span>
+                        </div>
+                        <input type="number" class="frm-input" id="txtCelularRegistro" placeholder="Celular" value="934908654">
+                        <div><i class="fas fa-mobile"></i></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="actions-login">
+                <div class="frm-check">
+                    <input type="checkbox" id="chk-terminos-registro">
+                    <label for="chk-terminos-registro">Declaro que he leído y acepto la
+                        <a href="#">Política de Privacidad</a>
+                        y los
+                        <a href="#">Términos y Condiciones</a>
+                        de AQFX Global Trading.</label>
+                </div>
+                <button class="boton boton-registro" id="btnCrearCuenta">Crear cuenta</button>
+
+                <p>Ya tienes una cuenta? <a href="login.html">Inicia sesión aquí</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="js/libraries/jquery-3.5.1.min.js"></script>
+    <script src="js/libraries/axios.min.js"></script>
+    <script src="js/registro.js"></script>
+</body>
+
+</html>

@@ -1,79 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>RendiCaja</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet"> 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/estilos.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template Dashboard</title>
+
+    <!-- Bootstrap CSS -->
+    <script src="https://kit.fontawesome.com/8720eaa80f.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/libraries/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+    <link rel="stylesheet" href="css/libraries/normalize.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+
+    <link rel="shortcut icon" href="img/logo.ico" />
 </head>
+
 <body>
     <div class="contenedor">
-        <div class="dashboard">
-            <i class="fas fa-tachometer-alt"></i>
-            <h1>Dashboard</h1>
+        <div class="dashboard fiexd-top">
+            <a href="index.html">
+                <div class="logo">
+                    <img src="img/logo.png" alt="AQFX" />
+                </div>
+            </a>
         </div>
-        <header class="header">
+        <header class="header fixed-top">
             <div class="grupo-iconos">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-sync-alt"></i>
-                <i class="fas fa-bell"></i>
-            </div>
-            <div class="grupo-usuario">
-                <img src="img/user-default.png" alt="" width="40px">
-                <p>Jimmy Sandoval</p>
-                <i class="fas fa-angle-down"></i>
+                <a href="javascript:void(0)" id="toggleMenu"><i class="fas fa-toggle-on"></i></a>
+                <a href="javascript:void(0)" id="btn-notificaciones"><i class="fas fa-bell"></i></a>
+                <a href="javascript:void(0)" id="btn-options"><i class="fas fa-ellipsis-h"></i></a>
             </div>
         </header>
-        <nav class="menu">
+        <nav class="menu" id="menu">
+            <div class="group-user">
+                <img class="photo-user" src="img/user-default.png" alt="User Photo" />
+                <h1 class="name-user">Jimmy Sandoval</h1>
+                <div class="status-user">Activo <span class="activo"></span></div>
+            </div>
+
             <p>Principal</p>
             <ul>
-                <li><a href="#"><i class="icono izquierda fas fa-tachometer-alt"></i>Dashboard</a></li>
-                <li><a href="#"><i class="icono izquierda fas fa-inbox"></i>Caja</a></li>
-                
-                <li><a href="javascript:void(0);"><i class="icono izquierda fas fa-hand-holding-usd"></i>Asignación<i class="icono derecha fas fa-angle-down"></i></a>
+                <li>
+                    <a href="index.html" data-menu="true"><i class="fas fa-chart-line"></i>Dashboard</a>
+                </li>
+                <li>
+                    <a href="index.html" data-menu="true"><i class="fas fa-chalkboard-teacher"></i>Cursos</a>
+                </li>
+                <li>
+                    <a href="index.html" data-menu="true"><i class="fas fa-users"></i>Alumnos</a>
+                </li>
+                <li>
+                    <a href="index.html" data-menu="true"><i class="fas fa-newspaper"></i>Noticias</a>
+                </li>
+                <li>
+                    <a href="index.html" data-menu="true"><i class="fas fa-play-circle"></i>Videos</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);"><i class="fas fa-video"></i>En vivo<i
+                            class="fas fa-angle-down"></i></a>
                     <ul>
-                        <li><a href="#"><i class="icono izquierda fas fa-circle"></i>Asignar cuenta</a></li>
-                        <li><a href="#"><i class="icono izquierda fas fa-circle"></i>Ver mis cuentas</a></li>
+                        <li>
+                            <a href="index.html" data-menu="false"><i class="fas fa-circle"></i>Sub menu</a>
+                        </li>
+                        <li>
+                            <a href="index.html" data-menu="false"><i class="fas fa-circle"></i>Sub menu</a>
+                        </li>
                     </ul>
                 </li>
-                <li><a href="javascript:void(0);"><i class="icono izquierda fas fa-users"></i>Empleados<i class="icono derecha fas fa-angle-down"></i></a>
-                    <ul>
-                        <li><a href="#"><i class="icono izquierda fas fa-circle"></i>Lista de empleados</a></li>
-                        <li><a href="#"><i class="icono izquierda fas fa-circle"></i>Ver cuentas asignadas</a></li>
-                        <li><a href="#"><i class="icono izquierda fas fa-circle"></i>Reembolsos</a></li>
-                        <li><a href="#"><i class="icono izquierda fas fa-circle"></i>Ver deudas pendientes</a></li>
-                    </ul>
+                <li>
+                    <a href="login.html" data-menu="true"><i class="fas fa-sign-out-alt"></i>Cerrar sesión</a>
                 </li>
-                <li><a href="javascript:void(0);"><i class="icono izquierda fas fa-university"></i>Cuenta Bancaria<i class="icono derecha fas fa-angle-down"></i></a>
-                    <ul>
-                        <li><a href="#"><i class="icono izquierda fas fa-circle"></i>Mis cuentas bancarias</a></li>
-                        <li><a href="#"><i class="icono izquierda fas fa-circle"></i>Bancos</a></li>
-                        <li><a href="#"><i class="icono izquierda fas fa-circle"></i>Tipo de cuentas</a></li>
-                    </ul>
-                </li>
-            </ul>
-
-            <p>Mantenimiento</p>
-            <ul>
-                <li ><a href="javascript:void(0);"><i class="icono izquierda fas fa-cog"></i>Configuración<i class="icono derecha fas fa-angle-down"></i></a>
-                    <ul>
-                        <li><a href="$"><i class="icono configuracion izquierda fas fa-th-large"></i>Categorías</a></li>
-                        <li><a href="#"><i class="icono configuracion izquierda fas fa-sliders-h"></i>Estados</a></li>
-                        <li><a href="#"><i class="icono configuracion izquierda fas fa-file"></i>Comprobantes</a></li>
-                    </ul>
-                </li>
-                <li><a href="#"><i class="icono izquierda fas fa-truck-moving"></i>Proveedores</i></a></li>
-                <li><a href="#"><i class="icono izquierda fas fa-chart-bar"></i>Reportes</i></a></li>
             </ul>
         </nav>
-        <section class="panel">
-            PANEL
+        <section class="main">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed metus ante, faucibus sit
+                        amet libero non, cursus rutrum mauris. Morbi semper orci id ligula tristique accumsan.
+                        Fusce at sapien iaculis, molestie diam a, mollis ante. Donec cursus, nunc et laoreet
+                        scelerisque, lorem ipsum fringilla magna, sed aliquam nulla lorem at leo. Aliquam
+                        posuere feugiat neque vel venenatis. Aenean gravida orci at erat bibendum euismod.
+                        Vestibulum a arcu ac velit malesuada rhoncus. Nam quis ante convallis, malesuada
+                        tellus faucibus, scelerisque massa. Cras porttitor, ex vitae porta porttitor, metus
+                        purus commodo ex, cursus faucibus massa quam vel arcu. Interdum et malesuada fames ac
+                        ante ipsum primis in faucibus. Ut vitae lorem eu magna scelerisque sagittis. Curabitur
+                        scelerisque, lacus sit amet posuere posuere, nibh libero auctor sem, at luctus lorem
+                        nibh ac ipsum. Quisque pretium odio non blandit interdum. Phasellus maximus, felis
+                        egestas luctus fermentum, tellus justo malesuada magna, vel lacinia tellus urna
+                        tincidunt risus.
+                        <br />
+                        Pellentesque sit amet leo tristique, gravida orci auctor, euismod turpis. Quisque nec
+                        arcu ac lorem scelerisque tincidunt vitae ac purus. Nulla sagittis vestibulum eros.
+                        Pellentesque sodales fringilla malesuada. Donec maximus nulla turpis, nec hendrerit
+                        tortor ullamcorper sed. Nam quis elementum felis, non efficitur velit. Donec convallis
+                        sit amet sapien eleifend suscipit.
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed metus ante, faucibus sit
+                        amet libero non, cursus rutrum mauris. Morbi semper orci id ligula tristique accumsan.
+                        Fusce at sapien iaculis, molestie diam a, mollis ante. Donec cursus, nunc et laoreet
+                        scelerisque, lorem ipsum fringilla magna, sed aliquam nulla lorem at leo. Aliquam
+                        posuere feugiat neque vel venenatis. Aenean gravida orci at erat bibendum euismod.
+                        Vestibulum a arcu ac velit malesuada rhoncus. Nam quis ante convallis, malesuada
+                        tellus faucibus, scelerisque massa. Cras porttitor, ex vitae porta porttitor, metus
+                        purus commodo ex, cursus faucibus massa quam vel arcu. Interdum et malesuada fames ac
+                        ante ipsum primis in faucibus. Ut vitae lorem eu magna scelerisque sagittis. Curabitur
+                        scelerisque, lacus sit amet posuere posuere, nibh libero auctor sem, at luctus lorem
+                        nibh ac ipsum. Quisque pretium odio non blandit interdum. Phasellus maximus, felis
+                        egestas luctus fermentum, tellus justo malesuada magna, vel lacinia tellus urna
+                        tincidunt risus.
+                        <br />
+                        Pellentesque sit amet leo tristique, gravida orci auctor, euismod turpis. Quisque nec
+                        arcu ac lorem scelerisque tincidunt vitae ac purus. Nulla sagittis vestibulum eros.
+                        Pellentesque sodales fringilla malesuada. Donec maximus nulla turpis, nec hendrerit
+                        tortor ullamcorper sed. Nam quis elementum felis, non efficitur velit. Donec convallis
+                        sit amet sapien eleifend suscipit.
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <script>
+                    let anio = new Date().getFullYear()
+                </script>
+                <p>
+                    Copyright ©
+                    <script>
+                        document.write(anio)
+                    </script>
+                    <span>Name Enterprise</span>. Developed by
+                    <a href="https://www.linkedin.com/in/jimmysandovalramirez/" target="_blanck">@jcsandoval</a>
+                </p>
+            </footer>
         </section>
     </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <!-- JavaScript -->
+    <script src="js/libraries/jquery-3.5.1.min.js"></script>
+    <script src="js/libraries/axios.min.js"></script>
+    <script src="js/libraries/jPages.min.js"></script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/libraries/bootstrap/popper.min.js"></script>
+    <script src="js/libraries/bootstrap/bootstrap.min.js"></script>
+
+    <script src="http://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+
     <script src="js/main.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,329 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  background: #f2f2f2;
+}
+
+.contenedor {
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 230px 1fr;
+  grid-template-columns: 230px 1fr;
+  -ms-grid-rows: 50px 1fr;
+  grid-template-rows: 50px 1fr;
+      grid-template-areas: "dashboard header" "nav main";
+  background: #f2f2f2;
+}
+
+.frm-input {
+  width: 100%;
+  height: 35px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  outline: none;
+  font: none;
+  border-radius: 5px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #34495e;
+  background: #f2f2f2;
+  border: 1px solid #f2f2f2;
+  padding: 0 10px;
+}
+.frm-input:focus {
+  border: 1px solid #009d6b;
+  background: #fff;
+}
+.frm-input::-webkit-input-placeholder {
+  font-family: "Open Sans";
+  font-size: 13px;
+  font-weight: 400;
+  color: #34495e;
+}
+.frm-input::-moz-placeholder {
+  font-family: "Open Sans";
+  font-size: 13px;
+  font-weight: 400;
+  color: #34495e;
+}
+.frm-input:-ms-input-placeholder {
+  font-family: "Open Sans";
+  font-size: 13px;
+  font-weight: 400;
+  color: #34495e;
+}
+.frm-input::-ms-input-placeholder {
+  font-family: "Open Sans";
+  font-size: 13px;
+  font-weight: 400;
+  color: #34495e;
+}
+.frm-input::placeholder {
+  font-family: "Open Sans";
+  font-size: 13px;
+  font-weight: 400;
+  color: #34495e;
+}
+
+.frm-group {
+  width: 100%;
+  -ms-grid-column-span: 12;
+  grid-column: span 12;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+.frm-group label {
+  font-size: 13px;
+  font-weight: 400;
+  color: #34495e;
+}
+.frm-group .group-input {
+  margin-top: 5px;
+  width: 100%;
+  position: relative;
+}
+.frm-group .group-input > .view-pass {
+  right: 0;
+  width: 35px;
+  height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: none;
+  cursor: pointer;
+}
+.frm-group .group-input > div {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 10px;
+}
+.frm-group .group-input > div i {
+  font-size: 13px;
+  color: #009d6b;
+}
+.frm-group .group-input input[type=number]::-webkit-inner-spin-button,
+.frm-group .group-input input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.frm-group .group-input input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.frm-check {
+  padding-left: 26px;
+}
+.frm-check input[type=checkbox] {
+  display: none;
+}
+.frm-check #chk-recuerdame-login:checked + label::before,
+.frm-check #chk-terminos-registro:checked + label::before {
+  border: 0.5px solid #009d6b;
+  background: #009d6b;
+  content: "";
+  font-family: "FontAwesome";
+  color: #fff;
+  font-size: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.frm-check label {
+  position: relative;
+  font-size: 13px;
+  font-weight: 300;
+  color: #34495e;
+  cursor: pointer;
+}
+.frm-check label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -26px;
+  width: 16px;
+  height: 16px;
+  background: #f2f2f2;
+  border: 0.5px solid #dadada;
+  border-radius: 3px;
+}
+.frm-check label > a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #34495e;
+}
+.frm-check label > a:hover {
+  text-decoration: underline;
+}
+
+.boton {
+  border: none;
+  outline: none;
+  font: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 100%;
+  height: 35px;
+  border-radius: 5px;
+  background: #fff;
+  border: 1px solid #009d6b;
+  color: #009d6b;
+  -webkit-transition: all 0.15s;
+  -o-transition: all 0.15s;
+  transition: all 0.15s;
+  cursor: pointer;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+}
+.boton:hover {
+  background: #009d6b;
+  color: #fff;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  background: #34495e;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 20px;
+}
+.wrapper .wrapper-login {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px 25px;
+  -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.55);
+          box-shadow: 0 0 50px rgba(0, 0, 0, 0.55);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.wrapper .wrapper-login .logo {
+  width: 190px;
+}
+.wrapper .wrapper-login .logo img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.wrapper .wrapper-login .tittle {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  color: #34495e;
+  margin: 30px 0 35px;
+}
+.wrapper .wrapper-login .tittle > span {
+  font-weight: 700;
+}
+.wrapper .wrapper-login .formulario-login {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: auto;
+  row-gap: 20px;
+  margin-bottom: 35px;
+}
+.wrapper .wrapper-login .actions-login {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: auto;
+  row-gap: 15px;
+}
+.wrapper .wrapper-login .actions-login .forget-pass {
+  -ms-grid-column-align: end;
+      justify-self: end;
+  font-size: 13px;
+  font-weight: 300;
+  color: #009d6b;
+  text-decoration: none;
+}
+.wrapper .wrapper-login .actions-login .forget-pass:hover {
+  text-decoration: underline;
+}
+.wrapper .wrapper-login .actions-login .boton-login,
+.wrapper .wrapper-login .actions-login p {
+  -ms-grid-column-span: 2;
+  grid-column: span 2;
+}
+.wrapper .wrapper-login .actions-login > p {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 400;
+  color: #34495e;
+}
+.wrapper .wrapper-login .actions-login > p > a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #009d6b;
+}
+.wrapper .wrapper-login .actions-login > p > a:hover {
+  text-decoration: underline;
+}

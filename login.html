@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="shortcut icon" href="img/logo.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8720eaa80f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/libraries/normalize.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="wrapper-login">
+            <div class="logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <h1 class="tittle"><span>Bienvenido</span></h1>
+            <div class="formulario-login">
+                <div class="frm-group">
+                    <label for="txtUsuarioLogin">Usuario:</label>
+                    <div class="group-input">
+                        <input type="text" class="frm-input" id="txtUsuarioLogin" placeholder="Usuario" value="jimmysandoval">
+                        <div><i class="fas fa-user"></i></div>
+                    </div>
+                </div>
+                <div class="frm-group">
+                    <label for="txtPasswordLogin">Contraseña:</label>
+                    <div class="group-input">
+                        <input type="password" class="frm-input" id="txtPasswordLogin" placeholder="Contraseña" value="jpPP@0805199#2">
+                        <div class="view-pass">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="actions-login">
+                <div class="frm-check">
+                    <input type="checkbox" id="chk-recuerdame-login">
+                    <label for="chk-recuerdame-login">Recuérdame</label>
+                </div>
+                <a href="#" class="forget-pass">¿Olvistaste tu contraseña?</a>
+                <button class="boton boton-login" id="btnIngresar">Iniciar sesión</button>
+
+                <p>Aún no tienes una cuenta? <a href="registro.html">Registrate aquí</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/libraries/jquery-3.5.1.min.js"></script>
+    <script src="js/libraries/axios.min.js"></script>
+    <script src="js/login.js"></script>
+</body>
+
+</html>
